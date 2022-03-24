@@ -1,6 +1,6 @@
 export default class PokeService {
-  static getPoke(){
-    return fetch(`https://pokeapi.co/api/v2/pokemon/1`)
+  static async getPoke(){
+    return await fetch(`https://pokeapi.co/api/v2/pokemon/1/`)
       .then(function(response) {
       if(!response.ok) {
         throw Error(response.statusText)
@@ -12,3 +12,5 @@ export default class PokeService {
     });
   }
 }
+
+// https://pokeapi.co/api/v2/pokemon-form/1/
